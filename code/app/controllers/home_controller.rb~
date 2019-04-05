@@ -1,0 +1,13 @@
+##
+# An class representing a controller which handles HTTP requests relating to the home page.
+class HomeController < ApplicationController
+  ##
+  # GET /home/index
+  # GET /
+  def index
+    # The +::+ is necessary because otherwise Rails thinks +Configuration+ refers to
+    # +ActiveSupport::Configurable::Configuration+. +::+ tells it that we want
+    # the +Configuration+ class in our namespace, not +ActiveSupport+.
+    @configuration = ::Configuration.first
+  end
+end
