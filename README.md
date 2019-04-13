@@ -6,7 +6,7 @@ See the wiki for more details.
 
 ## Running the prototype ##
 A prototype for the application is contained in the `code` directory. To run it, follow these steps:
-* Clone this repository
+* Clone this repository and navigate to the `code` directory
 * In your terminal, do `bundle install` to install dependencies
 * Do `rails db:create` to create the database
 * Do `rails db:migrate` to migrate the database
