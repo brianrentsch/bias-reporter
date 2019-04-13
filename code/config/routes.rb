@@ -5,4 +5,5 @@ Rails.application.routes.draw do
 
   get 'home/index'
   get 'track_reports/index'
+  get 'about/index'
 end
