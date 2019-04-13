@@ -8,5 +8,6 @@ See the wiki for more details.
 A prototype for the application is contained in the `code` directory. To run it, follow these steps:
 * Clone this repository
 * In your terminal, do `bundle install` to install dependencies
+* Do `rails db:create` to create the database
 * Do `rails db:migrate` to migrate the database
 * Finally, do `rails server` to run the application on local host
