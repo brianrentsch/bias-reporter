@@ -2,19 +2,17 @@
 
 <div class="centeralign">
   <h1>Racial Bias Reporter</h1>
-
-  <P>Acts of racial bias and discrimination have no place on a college campus.</p>
-  <p>Click the link below to submit a report</p>
-
-  <%= link_to 'Report an Incident', reports_path, class: 'link' %>
-
-  <p>Click the link below to track a report</p>
   
+  <P>Acts of racial bias and discrimination have no place on a college campus.</p>
+  <p>Click the links below to navigate the site</p>
+  
+  <%= link_to 'Report an Incident', reports_path, class: 'link' %>  
   <%= link_to 'Track a report', track_reports_path, class: 'link' %>
-
+  <%= link_to 'About', about_index_path, class: 'link' %>
+  
+  
   <!--<p>Click the link below to log in</p>
-
-  <%= link_to 'Log in'%>-->
-
-
+      
+      <%= link_to 'Log in'%>-->
+  
 </div>

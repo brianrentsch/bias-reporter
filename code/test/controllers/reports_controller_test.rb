@@ -8,11 +8,13 @@ class ReportsControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
     get reports_url
     assert_response :success
+    assert_select "title", "Reports | Bias Reporter"
   end
 
   test "should get new" do
     get new_report_url
     assert_response :success
+    assert_select "title", "Submit a Report | Bias Reporter"
   end
 
   test "should create report" do
