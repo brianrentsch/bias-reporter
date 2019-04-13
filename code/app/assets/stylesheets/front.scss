@@ -1,14 +1,14 @@
 .front-nav-ul {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   align-content: flex-start;
 
   list-style: none;
-  font-size: 1.5vw;
+  font-size: 1.0vw;
 
-  padding: 2vw 0;
-  border-bottom: 2px solid black;
+  padding: 1.5vw 0;
+  border-bottom: 1px solid black;
   margin: 0 0 2vw 0;
   
   &__li {
@@ -18,8 +18,8 @@
 
     text-align: center;
 
-    padding: 0 4vw;
-    border-left: 2px solid black;
+    padding: 0 2vw;
+    //border-left: 2px solid black;
     }   
 }   
 
