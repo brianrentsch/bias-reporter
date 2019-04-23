@@ -8,6 +8,7 @@ section {
 }
 
 .container{
+  text-align: center;
   margin-top: 20px;
 }
 
@@ -23,9 +24,19 @@ textarea {
   margin-bottom: 10px;
 }
 
-.btn btn-lg btn-primary {
-  color: #FFFFFF;
+//Style of 'logo' text used for nav bar
+#logo {
+  float: left;
+  margin-right: 660px;
+  font-size: 1.7em;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: -1px;  
+  font-weight: bold;
+  //border-right: 1px solid black; 
 }
+
+/* Nav-Bar */
 
 .front-nav-ul {
   display: flex;
@@ -48,7 +59,17 @@ textarea {
     text-align: center;
 
     padding: 0 2vw;
-    //border-left: 2px solid black;
+    }
+
+  &__li_b {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 0 2vw;
+    border-left: 1px solid black;
     }   
 }   
 

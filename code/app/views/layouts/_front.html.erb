@@ -1,8 +1,9 @@
 <header>
-  <nav>
-    <ul class="front-nav-ul">
-      <li class="front-nav-ul__li"><%= link_to 'HOME', home_index_path, class: 'link' %></li>
-      <li class="front-nav-ul__li"><%= link_to 'SUBMIT A REPORT', reports_path, class: 'link' %></li>
+  <nav>        
+    <ul class="front-nav-ul">        
+      <%= link_to "Racial Bias Reporter", home_index_path, id: "logo" %>  
+      <li class="front-nav-ul__li"><%= link_to 'FILE A REPORT', reports_path, class: 'btn btn-info' %></li>
+      <li class="front-nav-ul__li_b"><%= link_to 'HOME', home_index_path, class: 'link' %></li>
       <li class="front-nav-ul__li"><%= link_to 'ABOUT', about_index_path, class: 'link' %></li>      
     </ul>
   </nav>
