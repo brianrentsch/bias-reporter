@@ -1,18 +1,14 @@
 <% content_for(:title, 'Home') %>
 
-<div class="centeralign">
+<div class="center jumbotron">
   <h1>Racial Bias Reporter</h1>
-  
-  <P>Acts of racial bias and discrimination have no place on a college campus.</p>
-  <p>Click the links below to navigate the site</p>
-  
-  <%= link_to 'Report an Incident', reports_path, class: 'link' %>  
-  <%= link_to 'Track a report', track_reports_index_path, class: 'link' %>
-  <%= link_to 'About', about_index_path, class: 'link' %>
-  
-  
-  <!--<p>Click the link below to log in</p>
-      
-      <%= link_to 'Log in'%>-->
-  
+  <h3>Acts of racial bias and discrimination have no place on a college campus.</h3>  
+  <h4>If you have been the victim of racial bias, obtain justice for yourself and help prevent further racism by reporting the incident to your school.</h4>
+
+  <div class="container">
+    <%= link_to 'Report an Incident', reports_path, class: 'btn btn-lg btn-primary' %>  
+    <div class="container">
+      <%= link_to 'Track a report', track_reports_index_path, class: 'btn btn-outline-primary' %>
+    </div>
+  </div>
 </div>

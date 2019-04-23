@@ -1,3 +1,32 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* Universal */
+
+section {
+  overflow: auto;
+}
+
+.container{
+  margin-top: 20px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+.btn btn-lg btn-primary {
+  color: #FFFFFF;
+}
+
 .front-nav-ul {
   display: flex;
   justify-content: flex-end;
