@@ -12,9 +12,13 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :user_name %>
-    <%= form.text_field :user_name %>
+    <%= form.label :identification_code %>
+    <%= form.text_field :user_id %>
   </div>
+
+  <div class="container-nm">
+    <p>Enter a unique identifier to be associated with your report.<br><strong>Make sure you remember it</strong>; you'll need it to track your report's resolution status!</p>    
+  </div>   
 
   <div class="field">
     <%= form.label :date %>

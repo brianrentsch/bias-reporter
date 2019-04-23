@@ -12,6 +12,10 @@ section {
   margin-top: 20px;
 }
 
+.container-nm{
+  text-align: center;
+}
+
 textarea {
   resize: vertical;
 }
@@ -24,10 +28,27 @@ textarea {
   margin-bottom: 10px;
 }
 
+/* Override for btn-outline (not natively supported in bootstrap v3.x) */
+.btn-outline {
+    background-color: transparent;
+    color: inherit;
+    transition: all .5s;
+}
+
+.btn-info.btn-outline {
+    color: #5bc0de;
+}
+
+.btn-info.btn-outline:hover {
+  color: #fff;
+}
+
+/* Nav-Bar */
+
 //Style of 'logo' text used for nav bar
 #logo {
   float: left;
-  margin-right: 660px;
+  margin-right: 460px;
   font-size: 1.7em;
   color: black;
   text-transform: uppercase;
@@ -35,8 +56,6 @@ textarea {
   font-weight: bold;
   //border-right: 1px solid black; 
 }
-
-/* Nav-Bar */
 
 .front-nav-ul {
   display: flex;
@@ -50,7 +69,8 @@ textarea {
   padding: 1.5vw 0;
   border-bottom: 1px solid black;
   margin: 0 0 2vw 0;
-  
+
+//Standard nav-bar link  
   &__li {
     display: flex;
     justify-content: center;
@@ -61,6 +81,16 @@ textarea {
     padding: 0 2vw;
     }
 
+//Link with no padding
+  &__li_np {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    }
+
+//Link with border
   &__li_b {
     display: flex;
     justify-content: center;

@@ -11,6 +11,7 @@ p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
+  margin-bottom: 20px;
 }
 
 pre {
@@ -31,6 +32,11 @@ pre {
     background-color: #000;
   }
 }*/
+
+table {
+  margin: 0 auto;
+  margin-top: 20px;
+}
 
 th {
   padding-bottom: 5px;
