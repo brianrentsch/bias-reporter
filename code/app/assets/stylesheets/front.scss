@@ -12,8 +12,7 @@ section {
   margin-top: 20px;
 }
 
-.container-nm{
-  text-align: center;
+.container-list{
 }
 
 textarea {
@@ -39,7 +38,17 @@ textarea {
     color: #5bc0de;
 }
 
-.btn-info.btn-outline:hover {
+.btn-primary.btn-outline {
+  color: #428bca;
+}
+
+.btn-danger.btn-outline {
+  color: #d9534f;
+}
+
+.btn-info.btn-outline:hover,
+.btn-primary.btn-outline:hover,
+.btn-danger.btn-outline:hover {
   color: #fff;
 }
 

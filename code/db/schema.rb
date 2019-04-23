@@ -16,10 +16,12 @@ ActiveRecord::Schema.define(version: 2019_03_04_223804) do
   enable_extension "plpgsql"
 
   create_table "reports", force: :cascade do |t|
-    t.string "date"
+    t.string "user_identifier"
+    t.date "date"
     t.string "time"
     t.string "location"
     t.text "details"
+    t.string "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

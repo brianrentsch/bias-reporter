@@ -12,17 +12,17 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :identification_code %>
-    <%= form.text_field :user_id %>
-  </div>
+    <%= form.label :user_identifier %>       
+    <%= form.text_field :user_identifier %>
+  </div>  
 
-  <div class="container-nm">
-    <p>Enter a unique identifier to be associated with your report.<br><strong>Make sure you remember it</strong>; you'll need it to track your report's resolution status!</p>    
-  </div>   
+  <div class="container-list">
+      <p>Enter a unique identifier to be associated with your report.<br><strong>Make sure you remember it</strong>; you'll need it to track your report's resolution status!</p>    
+  </div>
 
   <div class="field">
     <%= form.label :date %>
-    <%= form.text_field :date %>
+    <%= form.date_select :date %>
   </div>
 
   <div class="field">
@@ -40,7 +40,11 @@
     <%= form.text_area :details %>
   </div>
 
+  <div class="container-list">
+    <p>Please describe the incident.</p>
+  </div>
+
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Submit", class: "btn btn-primary btn-outline" %>      
   </div>
 <% end %>

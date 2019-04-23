@@ -2,19 +2,17 @@
 
 <div>
   <h1>Track Report Status</h1>  
-
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
       <%= form_for(:victim_session, url: track_reports_index_path) do |f| %>
-      
+      <br>
       <%= f.label :identification_code %>
       <%= f.text_field :user_id, class: 'form-control' %>
-      
+      <br>
       <%= f.submit "Find your report", class: "btn btn-primary" %>
       <% end %>
-      
+      <br>
       <p>Looking to submit a report? <%= link_to "Submit one here", new_report_path %></p>
     </div>
-  </div>
-  
+  </div>  
 </div>
