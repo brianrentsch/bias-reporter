@@ -12,7 +12,12 @@ section {
   margin-top: 20px;
 }
 
-.container-list{
+.container-nm{
+  text-align: center;
+}
+
+.container-left {
+  text-align: left;
 }
 
 textarea {
@@ -44,6 +49,7 @@ textarea {
 
 .btn-danger.btn-outline {
   color: #d9534f;
+  margin-bottom: 20px;
 }
 
 .btn-info.btn-outline:hover,

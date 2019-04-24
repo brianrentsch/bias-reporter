@@ -1,6 +1,9 @@
 <% content_for(:title, 'Track a Report') %>
 
 <div>
+  <% flash.each do |message_type, message| %>
+    <div class="alert alert-<%= message_type %>"><%= message %></div>
+  <% end %>    
   <h1>Track Report Status</h1>  
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
