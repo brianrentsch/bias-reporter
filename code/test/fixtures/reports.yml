@@ -1,13 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  date: MyString
+  user_identifier: one
+  date: 12/24/2001
   time: MyString
   location: MyString
   details: MyText
+  status: MyString
 
 two:
-  date: MyString
+  user_identifier: two
+  date: 12/24/2001
   time: MyString
   location: MyString
   details: MyText
+  status: MyString
