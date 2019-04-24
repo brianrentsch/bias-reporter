@@ -3,7 +3,8 @@ require 'test_helper'
 class SchoolTest < ActiveSupport::TestCase
   def setup
     @school = School.new(name: "TestSchool", email: "contact@school.edu", address: "217 College Rd", 
-                         city: "Boston", state: "Massachusetts", zip_code: "000001")
+                         city: "Boston", state: "Massachusetts", zip_code: "000001", 
+                         password: "password", password_confirmation: "password")
   end
 
   test "should be valid" do
@@ -37,6 +38,11 @@ class SchoolTest < ActiveSupport::TestCase
     assert_not @school.valid?
   end
 
+  test "password should be present" do
+    @school.password = @school.password_confirmation = " " * 6
+    assert_not @school.valid?
+  end
+
   ##
   # Length testing
   test "name should not be too long" do
@@ -66,6 +72,11 @@ class SchoolTest < ActiveSupport::TestCase
 
   test "email should not be too long" do
     @school.email = "a" * 201
+    assert_not @school.valid?
+  end
+
+  test "password should not be too short" do
+    @school.password = @school.password_confirmation = "a"
     assert_not @school.valid?
   end
   

@@ -5,5 +5,8 @@ class School < ApplicationRecord
   validates :state, presence: true, length: { maximum: 20 }
   validates :zip_code, presence: true, length: { maximum: 15 }
   validates :email, length: { maximum: 200 }
+  validates :password, presence: true, length: { minimum: 6 }
+
+  has_secure_password
   
 end
