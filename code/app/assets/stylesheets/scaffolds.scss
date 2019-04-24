@@ -63,15 +63,15 @@ div {
   margin: 0 auto;
 }
 
-.alert-danger {
-  width: 650px;
+.alert-danger-custom {
+ width: 650px;
   border: 2px solid red;
   padding: 7px 7px 0;
   margin-bottom: 20px;
   background-color: #f0f0f0;  
   margin: 0 auto;
 
-  h2 {
+  h2 { 
     text-align: left;
     font-weight: bold;
     padding: 5px 5px 5px 15px;
@@ -83,7 +83,7 @@ div {
 
   ul li {
     font-size: 14px;
-    //list-style: square;
+    list-style: square;
   }
 }
 

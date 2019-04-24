@@ -1,7 +1,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-/* Universal */
+/* Universal Bootstrap formatting */ 
 
 section {
   overflow: auto;
@@ -32,7 +32,7 @@ textarea {
   margin-bottom: 10px;
 }
 
-/* Override for btn-outline (not natively supported in bootstrap v3.x) */
+//Override for btn-outline (not natively supported in bootstrap v3.x) 
 .btn-outline {
     background-color: transparent;
     color: inherit;
@@ -58,20 +58,20 @@ textarea {
   color: #fff;
 }
 
-/* Nav-Bar */
+/* Front Nav-Bar formatting */
 
 //Style of 'logo' text used for nav bar
 #logo {
   float: left;
-  margin-right: 460px;
   font-size: 1.7em;
   color: black;
+  margin-left: 20px;
   text-transform: uppercase;
   letter-spacing: -1px;  
   font-weight: bold;
-  //border-right: 1px solid black; 
 }
 
+//Core nav-bar formatting
 .front-nav-ul {
   display: flex;
   justify-content: flex-end;
@@ -116,8 +116,9 @@ textarea {
     padding: 0 2vw;
     border-left: 1px solid black;
     }   
-}   
-
+}  
+ 
+/*
 .front-show-main {
   display: flex;
   justify-content: center;
@@ -126,4 +127,4 @@ textarea {
   > div {
     flex-basis: 50%;
   }
-}
+}*/

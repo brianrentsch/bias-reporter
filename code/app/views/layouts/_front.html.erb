@@ -1,11 +1,13 @@
 <header>
   <nav>        
     <ul class="front-nav-ul">        
-      <%= link_to "Racial Bias Reporter", home_index_path, id: "logo" %>  
+      <div class="container">
+	<%= link_to "Racial Bias Reporter", home_index_path, id: "logo" %>  
+      </div>
       <li class="front-nav-ul__li_np"><%= link_to 'INSTITUTION LOGIN', faculty_sessions_new_path, class: 'btn btn-info' %></li>      
       <li class="front-nav-ul__li"><%= link_to 'CREATE AN ACCOUNT', schools_new_path, class: 'btn btn-info btn-outline' %></li>
       <li class="front-nav-ul__li_b"><%= link_to 'HOME', home_index_path, class: 'link' %></li>
-      <li class="front-nav-ul__li"><%= link_to 'ABOUT', about_index_path, class: 'link' %></li>      
+      <li class="front-nav-ul__li"><%= link_to 'ABOUT', about_index_path, class: 'link' %></li>          
     </ul>
   </nav>
 </header>
