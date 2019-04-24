@@ -10,7 +10,7 @@
       <%= form_for(:victim_session, url: track_reports_path) do |f| %>
       <br>
       <%= f.label :identification_code %>
-      <%= f.text_field :user_identifier, class: 'form-control' %>
+      <%= f.password_field :user_identifier, class: 'form-control' %>
       <br>
       <%= f.submit "Find your report", class: "btn btn-primary" %>
       <% end %>

@@ -10,7 +10,7 @@ class TrackReportsController < ApplicationController
   # Display a report based on the entered userID
   # POST /track_reports
   def create
-    @report = Report.find_by(user_identifier: params[:victim_session][:user_identifier].downcase)
+    @report = Report.find_by(user_identifier: params[:victim_session][:user_identifier])
     if @report 
       find_report @report  #Call helper method to create session
       redirect_to @report
