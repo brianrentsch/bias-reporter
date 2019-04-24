@@ -19,7 +19,7 @@ class ReportsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create report" do
     assert_difference('Report.count') do
-      post reports_url, params: { report: { date: @report.date, details: @report.details, location: @report.location, time: @report.time } }
+      post reports_url, params: { report: { user_identifier: "MyID3", date: @report.date, details: @report.details, location: @report.location, time: @report.time, status: @report.status } }
     end
 
     assert_redirected_to report_url(Report.last)
