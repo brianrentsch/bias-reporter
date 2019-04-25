@@ -1,51 +1,44 @@
-<%= form_with(model: report, local: true) do |form| %>
-  <% if report.errors.any? %>
-    <div class="alert alert-danger" role="alert">
-      <h2><%= pluralize(report.errors.count, "error") %> prohibited this report from being saved:</h2>      
-      <ul>
-      <% report.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-  
-  <div class="field">
-    <%= form.label :user_identifier %>       
-    <%= form.text_field :user_identifier %>
-  </div>  
-
-  <div class="container-nm">
-      <p>Enter a unique identifier to be associated with your report.<br><strong>Make sure you remember it</strong>; you'll need it to track your report's resolution status!    
-	<br>The ID is <strong>case sensitive</strong>.
-      </p>
-  </div>
-
-  <div class="field">
-    <%= form.label :date %>
-    <%= form.date_select :date %>
-  </div>
-
-  <div class="field">
-    <%= form.label :time %>
-    <%= form.text_field :time %>
-  </div>
-
-  <div class="field">
-    <%= form.label :location %>
-    <%= form.text_field :location %>
-  </div>
-
-  <div class="field">
-    <%= form.label :details %>
-    <%= form.text_area :details %>
-  </div>
-
-  <div class="container-nm">
-    <p>Please describe the incident.</p>
-  </div>
-
-  <div class="actions">
-    <%= form.submit "Submit", class: "btn btn-primary btn-outline" %>      
-  </div>
+<% if report.errors.any? %>
+<div class="alert alert-danger" role="alert">
+  <h2><%= pluralize(report.errors.count, "error") %> prohibited this report from being saved:</h2>      
+  <ul>
+    <% report.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
 <% end %>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@report) do |f| %>
+            
+    
+    <%= f.label :user_identifier, "User ID" %>       
+    <%= f.text_field :user_identifier, class: 'form-control' %>
+    
+    <div class="container-nm">
+      <p>Enter a unique identifier to be associated with your report.<br><strong>Make sure you remember it</strong>; you'll need it to track your report's resolution status!    
+	The ID is <strong>case sensitive</strong>.
+      </p>
+    </div>
+    
+    <%= f.label :date, "Date of Incident" %>
+    <%= f.date_select :date, class: 'form-control' %>
+    <br>
+    <%= f.label :time, "Time of Incident" %>
+    <%= f.text_field :time, class: 'form-control' %>
+    <br>
+    <%= f.label :location, "Location of Incident" %>
+    <%= f.text_field :location, class: 'form-control' %>
+    <br>
+    <%= f.label :details %>
+    <%= f.text_area :details, class: 'form-control' %>
+    
+    <div class="container-nm">
+      <p>Please describe the incident.</p>
+    </div>
+    
+    <%= f.submit "Submit", class: "btn btn-primary btn-outline" %>    
+    <% end %>
+    
+ 

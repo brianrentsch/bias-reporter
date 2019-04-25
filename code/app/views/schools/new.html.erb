@@ -1,2 +1,56 @@
-<h1>Schools#new</h1>
-<p>Find me in app/views/schools/new.html.erb</p>
+<% content_for(:title, 'New Account') %>
+<div class="center">  
+  <% if @school.errors.any? %>
+  <div class="alert alert-danger" role="alert">
+    <h2><%= pluralize(@school.errors.count, "error") %> prohibited this account from being created:</h2>      
+    <ul>
+      <% @school.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+  
+  <h1>Create a New Account</h1>
+  <h4>This page is for academic institutions who want to be a part of the Racial Bias Reporter.<br>
+    If your institution currently doesn't have an account, you can create one here.
+  </h4>
+  <h3>Academic Institution Information:</h3>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <%= form_for(@school) do |f| %>
+      <br>
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control' %>
+      <br>
+      <%= f.label :address%>
+      <%= f.text_field :address, class: 'form-control' %>
+      <br>
+      <%= f.label :city %>
+      <%= f.text_field :city, class: 'form-control' %>
+      <br>
+      <%= f.label :state %>
+      <%= f.text_field :state, class: 'form-control' %>
+      <br>
+      <%= f.label :zip_code, "ZIP Code" %>
+      <%= f.text_field :zip_code, class: 'form-control' %>     
+      <br>
+      <h3>Account Information:</h3>  
+      <%= f.label :email %>
+      <%= f.email_field :email, class: 'form-control'%>
+      <br>
+      <%= f.label :password %>
+      <%= f.password_field :password, class: 'form-control' %>
+      <br>
+      <%= f.label :password_confirmation, "Confirmation" %>
+      <%= f.password_field :password_confirmation, class: 'form-control' %>
+      <div>
+	<br>
+	<%= f.submit "Create an Account", class: "btn btn-primary btn-outline" %>
+	<% end %>
+      </div>
+      <br>
+      <p>Looking to submit a report? <%= link_to "Submit one here.", new_report_path %></p>
+    </div>
+  </div>  
+</div>

@@ -1,0 +1,6 @@
+<% content_for(:title, 'School Profile') %>
+<% flash.each do |message_type, message| %>
+  <div class="alert alert-<%= message_type %>"><%= message %></div>
+<% end %>    
+
+<h2>Welcome, <%= @school.name %></h2>

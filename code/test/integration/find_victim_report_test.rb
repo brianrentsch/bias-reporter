@@ -7,9 +7,9 @@ class FindVictimReportTest < ActionDispatch::IntegrationTest
     assert_template 'track_reports/index'
     post track_reports_path, params: { victim_session: { user_identifier: "" } }
     assert_template 'track_reports/index'
-    assert_not flash.empty?
-    get root_url
-    assert flash.empty?
+    assert_not flash.empty?  #Check that flash has triggered
+    get root_url          #Switch page
+    assert flash.empty?   #Check that flash has disappeared
     assert_response :success
   end
 end

@@ -32,6 +32,13 @@ textarea {
   margin-bottom: 10px;
 }
 
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: $state-danger-text;
+  }
+}
+
 //Override for btn-outline (not natively supported in bootstrap v3.x) 
 .btn-outline {
     background-color: transparent;
@@ -45,6 +52,8 @@ textarea {
 
 .btn-primary.btn-outline {
   color: #428bca;
+  margin-bottom: 10px;
+
 }
 
 .btn-danger.btn-outline {
