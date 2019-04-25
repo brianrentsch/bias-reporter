@@ -2,7 +2,7 @@
 ## About the project ##
 This project aims to provide college students with a simple, quick, and secure method of reporting incidents of racial bias to their school. The project will be implemented via a web application developed using Ruby on Rails, PostgreSQL, HTML, CSS and JavaScript.
 
-See the wiki for the full project details and documentation. Contributor guidelines can be found on their own wiki as well.
+See the wiki for the full project details and documentation. Contributor guidelines can be found on a separate wiki page as well.
 
 ## Running the application ##
 The application is fully contained in the `code` directory. To run it, follow these steps:
