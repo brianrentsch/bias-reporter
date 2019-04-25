@@ -1,0 +1,24 @@
+<% if report.errors.any? %>
+<div class="alert alert-danger" role="alert">
+  <h2><%= pluralize(report.errors.count, "error") %> prohibited this report from being saved:</h2>      
+  <ul>
+    <% report.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@report) do |f| %>    
+    
+    <%= f.label :status, "Resolution Status" %>           
+    <%= f.text_area :status, class: 'form-control' %>
+    <br>
+
+    <%= f.submit "Submit", class: "btn btn-primary btn-outline" %>    
+    <% end %>
+  </div>
+</div>
+

@@ -1,14 +1,17 @@
 <% content_for(:title, 'Home') %>
-
+<% flash.each do |message_type, message| %>
+  <div class="alert alert-<%= message_type %>"><%= message %></div>
+<% end %>    
 <div class="center jumbotron">
   <h1>Racial Bias Reporter</h1>
-  <h3>Acts of racial bias and discrimination have no place on a college campus.</h3>  
-  <h4>If you have been the victim of racial bias, obtain justice for yourself and help prevent further racism by reporting the incident to your school.</h4>
+  <h3>Acts of racial bias and discrimination have no place on a college campus.</h3>
+  <br>  
+  <h4>If you have been the victim of racial bias, seek justice for yourself<br>and help prevent further racism by reporting the incident to your school.</h4>
 
   <div class="container">
-    <%= link_to 'Report an Incident', reports_path, class: 'btn btn-lg btn-primary' %>  
+    <%= link_to 'Report an Incident', new_report_path, class: 'btn btn-lg btn-primary' %>  
     <div class="container">
-      <%= link_to 'Track a report', track_reports_index_path, class: 'btn btn-outline-primary' %>
+      <%= link_to 'Track a report', track_reports_path, class: 'link' %>
     </div>
   </div>
 </div>

@@ -1,12 +1,26 @@
+<% content_for(:title, 'Your Report') %>
 <p id="notice"><%= notice %></p>
 
+<h1>Your Report</h1>
+
 <p>
-  <strong>Date:</strong>
+  <strong>Submitted:</strong>
+  <%= @report.created_at %>
+</p>
+
+<p>
+  <strong>User ID:</strong>
+  <%= @report.user_identifier %>
+</p>
+<br>
+
+<p>
+  <strong>Date of Incident:</strong>
   <%= @report.date %>
 </p>
 
 <p>
-  <strong>Time:</strong>
+  <strong>Time of Incident:</strong>
   <%= @report.time %>
 </p>
 
@@ -19,6 +33,10 @@
   <strong>Details:</strong>
   <%= @report.details %>
 </p>
+<br>
+<h4>
+  <strong>Resolution Status:</strong>
+  <%= @report.status %>
+</h4>
 
-<%= link_to 'Edit', edit_report_path(@report) %> |
-<%= link_to 'Back', reports_path %>
+<%= link_to 'Home', home_index_path, class: "btn btn-primary" %>

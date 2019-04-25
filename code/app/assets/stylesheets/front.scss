@@ -1,7 +1,16 @@
+// Racial Bias Reporter
+// Project Description: Web-app to allow victims of on-campus racial bias
+// to report these incidents to their schools, and track the
+// resolution.
+// File Description: CSS file for the front layout of the application
+// Auto-Generated?: No. Code in this file was based on a number of sources:
+// * 1. The bootstrap API
+// * 2. The MSF web-application styling
+// * 3. The rails-tutorial by Michael Hartl at https://www.railstutorial.org/ 
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-/* Universal */
+/* Universal Bootstrap formatting */ 
 
 section {
   overflow: auto;
@@ -10,6 +19,14 @@ section {
 .container{
   text-align: center;
   margin-top: 20px;
+}
+
+.container-nm{
+  text-align: center;
+}
+
+.container-left {
+  text-align: left;
 }
 
 textarea {
@@ -24,20 +41,57 @@ textarea {
   margin-bottom: 10px;
 }
 
+//error reporting text box
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: $state-danger-text;
+  }
+}
+
+
+//Override classes for btn-outline (not natively supported in bootstrap v3.x) 
+.btn-outline {
+    background-color: transparent;
+    color: inherit;
+    transition: all .5s;
+}
+
+.btn-info.btn-outline {
+    color: #5bc0de;
+}
+
+.btn-primary.btn-outline {
+  color: #428bca;
+  margin-bottom: 10px;
+
+}
+
+.btn-danger.btn-outline {
+  color: #d9534f;
+  margin-bottom: 20px;
+}
+
+.btn-info.btn-outline:hover,
+.btn-primary.btn-outline:hover,
+.btn-danger.btn-outline:hover {
+  color: #fff;
+}
+
+/* Front Nav-Bar formatting */
+
 //Style of 'logo' text used for nav bar
 #logo {
   float: left;
-  margin-right: 660px;
   font-size: 1.7em;
   color: black;
+  margin-left: 20px;
   text-transform: uppercase;
   letter-spacing: -1px;  
   font-weight: bold;
-  //border-right: 1px solid black; 
 }
 
-/* Nav-Bar */
-
+//Core nav-bar formatting
 .front-nav-ul {
   display: flex;
   justify-content: flex-end;
@@ -50,7 +104,8 @@ textarea {
   padding: 1.5vw 0;
   border-bottom: 1px solid black;
   margin: 0 0 2vw 0;
-  
+
+//Standard nav-bar link  
   &__li {
     display: flex;
     justify-content: center;
@@ -61,6 +116,16 @@ textarea {
     padding: 0 2vw;
     }
 
+//Link with no padding
+  &__li_np {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    }
+
+//Link with border
   &__li_b {
     display: flex;
     justify-content: center;
@@ -71,14 +136,5 @@ textarea {
     padding: 0 2vw;
     border-left: 1px solid black;
     }   
-}   
-
-.front-show-main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  > div {
-    flex-basis: 50%;
-  }
-}
+}  
+ 

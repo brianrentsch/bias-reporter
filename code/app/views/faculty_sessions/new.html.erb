@@ -1,0 +1,33 @@
+<% content_for(:title, 'Log In') %>
+<div class="center">    
+  <% flash.each do |message_type, message| %>
+    <div class="alert alert-<%= message_type %>"><%= message %></div>
+  <% end %>    
+
+  <h1>Log In</h1>
+  <h4>Academic institutions: log in to see incident reports submitted to your school.</h4>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <%= form_for(:faculty_session, url:login_path) do |f| %>
+      <br>
+
+      <% @schools = School.all %>    
+
+      <%= f.label :name, "School Name" %>
+      <%= f.select :name, options_from_collection_for_select(@schools, 'name', 'name'), {}, {class: "form-control"} %>
+      <br>
+      <%= f.label :password %>
+      <%= f.password_field :password, class: 'form-control' %>
+      <div>
+	<br>
+	<%= f.submit "Log in", class: "btn btn-primary btn-block" %>	
+	<div class="container-nm container-left">
+	  <p>Don't have an account? <%= link_to "Create one for your institution.", new_school_path %></p>	       
+	</div>
+      </div>
+      <% end %>
+      <br>
+      <p>Looking to submit a report? <%= link_to "Submit one here.", new_report_path %></p>
+    </div>
+  </div>  
+</div>
