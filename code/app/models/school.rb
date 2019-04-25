@@ -1,3 +1,10 @@
+# Racial Bias Reporter #
+# Project Description: Web-app to allow victims of on-campus racial bias
+# to report these incidents to their schools, and track the
+# resolution.
+# File Description: model file of the School DB entity
+# Auto-Generated?: Created and modified by me.
+
 class School < ApplicationRecord
   before_save { self.name = name.downcase }  #downcase institution name, for the sake of consistency
   validates :name, presence: true, uniqueness: { case_sensitive: false }, length: { maximum: 50 }
