@@ -7,4 +7,10 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
+  
+  ##
+  # A testing analogue of the faculty_sessions 'logged_in?' helper method. Returns true if a test school is logged in
+  def is_logged_in?
+    !session[:school_id].nil?
+  end
 end

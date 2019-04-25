@@ -1,17 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MySchool1
-  email: MyString
-  address: MyString
-  city: MyString
-  state: MyString
-  zip_code: MyString
+college1:
+  name: test university
+  email: example@email.com
+  address: One Lane
+  city: Onett
+  state: Washington
+  zip_code: 11111
+  password_digest: <%= School.digest("password") %>
 
-two:
+college2:
   name: MySchool2
   email: MyString
-  address: MyString
+  address: Two Drive
   city: MyString
   state: MyString
   zip_code: MyString
+  password_digest: <%= School.digest("password") %>

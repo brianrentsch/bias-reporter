@@ -7,10 +7,13 @@ class SchoolsController < ApplicationController
     @school = School.new
   end
 
+  ##
+  # POST /schools
   def create
     @school = School.new(school_params)
     
     if @school.save
+      log_in @school
       flash[:success] = "Account successfully created"
       redirect_to @school
     else
