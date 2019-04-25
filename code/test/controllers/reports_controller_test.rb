@@ -2,7 +2,7 @@ require 'test_helper'
 
 class ReportsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @report = reports(:one)    
+    @report = reports(:report_one)    
   end
 
   test "should get index" do    

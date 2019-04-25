@@ -1,6 +1,6 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
+report_one:
   user_identifier: MyID5
   date: 2019-04-25
   time: MyString
@@ -9,11 +9,11 @@ one:
   status: Pending
   school_id: 1
 
-two:
+report_two:
   user_identifier: MyID4
   date: 2019-04-25
   time: MyString
   location: MyString
   details: MyText
   status: Pending
-  school_id: 2
+  school_id: 1
