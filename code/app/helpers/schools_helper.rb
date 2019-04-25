@@ -1,2 +1,2 @@
-module SchoolsHelper
+module SchoolsHelper 
 end

@@ -10,8 +10,11 @@
     <div class="col-md-6 col-md-offset-3">
       <%= form_for(:faculty_session, url:login_path) do |f| %>
       <br>
+
+      <% @schools = School.all %>    
+
       <%= f.label :name, "School Name" %>
-      <%= f.text_field :name, class: 'form-control' %>
+      <%= f.select :name, options_from_collection_for_select(@schools, 'name', 'name'), {}, {class: "form-control"} %>
       <br>
       <%= f.label :password %>
       <%= f.password_field :password, class: 'form-control' %>

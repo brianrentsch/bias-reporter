@@ -21,6 +21,7 @@ class FacultySessionsController < ApplicationController
 
   def destroy
     log_out
+    flash[:success] = "Succesfully logged out"
     redirect_to root_url
   end
 end

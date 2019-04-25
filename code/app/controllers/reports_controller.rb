@@ -4,7 +4,8 @@ class ReportsController < ApplicationController
   # GET /reports
   # GET /reports.json
   def index
-    @reports = Report.all
+    redirect_to new_report_url
+    #@reports = Report.all
   end
 
   # GET /reports/1
@@ -41,16 +42,14 @@ class ReportsController < ApplicationController
   # PATCH/PUT /reports/1
   # PATCH/PUT /reports/1.json
   def update
-    respond_to do |format|
-      if @report.update(report_params)
-        format.html { redirect_to @report, notice: 'Report was successfully updated.' }
-        format.json { render :show, status: :ok, location: @report }
-      else
-        format.html { render :edit }
-        format.json { render json: @report.errors, status: :unprocessable_entity }
-      end
+    if @report.update(report_params)
+      flash[:success] = "Satus was successfully updated."
+      redirect_to current_school
+    else
+      render 'edit'
     end
   end
+  
 
   # DELETE /reports/1
   # DELETE /reports/1.json
@@ -70,6 +69,6 @@ class ReportsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def report_params
-      params.require(:report).permit(:user_identifier, :date, :time, :location, :details)
+      params.require(:report).permit(:user_identifier, :date, :time, :location, :details, :school_id, :status)
     end
 end

@@ -1,8 +1,7 @@
 <% content_for(:title, 'Edit a Report') %>
 
-<h1>Editing Report</h1>
+<h1>Editing Resolution Status</h1>
 
-<%= render 'form', report: @report %>
+<%= render 'form-mod', report: @report %>
 
-<!--%= link_to 'Show', @report, class: "btn btn-sm btn-primary" %-->
-<%= link_to 'Cancel', reports_path, class:"btn btn-sm btn-danger btn-outline" %>
+<%= link_to 'Cancel', current_school, class:"btn btn-sm btn-danger btn-outline" %>

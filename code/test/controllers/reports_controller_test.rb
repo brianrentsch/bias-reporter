@@ -2,13 +2,12 @@ require 'test_helper'
 
 class ReportsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @report = reports(:one)
+    @report = reports(:one)    
   end
 
-  test "should get index" do
+  test "should get index" do    
     get reports_url
-    assert_response :success
-    assert_select "title", "Reports | Bias Reporter"
+    assert_redirected_to new_report_url
   end
 
   test "should get new" do
@@ -17,18 +16,20 @@ class ReportsControllerTest < ActionDispatch::IntegrationTest
     assert_select "title", "Submit a Report | Bias Reporter"
   end
 
-  test "should create report" do
-    assert_difference('Report.count') do
-      post reports_url, params: { report: { user_identifier: "MyID3", date: @report.date, details: @report.details, location: @report.location, time: @report.time, status: @report.status } }
+  test "should create report" do       
+    get new_report_path
+    assert_response :success
+    assert_difference 'Report.count', 1 do
+      post reports_url, params: { report: { user_identifier: "UID", date: "2019-24-01", details: "Mytext", location: "Somewhere", time: "12:00am", school_id: 1 } }
     end
-
+    
     assert_redirected_to report_url(Report.last)
   end
 
   test "should show report" do
     get report_url(@report)
-    assert_response :success
-  end
+    assert_response :success    
+end
 
   test "should get edit" do
     get edit_report_url(@report)
@@ -37,7 +38,7 @@ class ReportsControllerTest < ActionDispatch::IntegrationTest
 
   test "should update report" do
     patch report_url(@report), params: { report: { date: @report.date, details: @report.details, location: @report.location, time: @report.time } }
-    assert_redirected_to report_url(@report)
+    assert_not flash.empty?
   end
 
   test "should destroy report" do

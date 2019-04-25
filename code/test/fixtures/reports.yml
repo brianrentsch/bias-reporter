@@ -1,17 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  user_identifier: MyID1
-  date: 12/24/2001
+  user_identifier: MyID5
+  date: 2019-04-25
   time: MyString
   location: MyString
   details: MyText
-  status: MyString
+  status: Pending
+  school_id: 1
 
 two:
-  user_identifier: MyID2
-  date: 12/24/2001
+  user_identifier: MyID4
+  date: 2019-04-25
   time: MyString
   location: MyString
   details: MyText
-  status: MyString
+  status: Pending
+  school_id: 2

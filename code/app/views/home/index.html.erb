@@ -1,5 +1,7 @@
 <% content_for(:title, 'Home') %>
-
+<% flash.each do |message_type, message| %>
+  <div class="alert alert-<%= message_type %>"><%= message %></div>
+<% end %>    
 <div class="center jumbotron">
   <h1>Racial Bias Reporter</h1>
   <h3>Acts of racial bias and discrimination have no place on a college campus.</h3>

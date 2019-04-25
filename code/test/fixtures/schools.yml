@@ -10,7 +10,7 @@ college1:
   password_digest: <%= School.digest("password") %>
 
 college2:
-  name: MySchool2
+  name: myschool
   email: MyString
   address: Two Drive
   city: MyString
